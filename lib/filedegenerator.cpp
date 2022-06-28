@@ -33,12 +33,9 @@ vector<int> inv(vector<int> v){
 }
 char* encrypt(char* inp,vector<int> m){
     int n=m.size();
-    char* out0=(char*)malloc(n);
-    char* out1=(char*)malloc(n);
-    for(int i=0;i<n;i++) out0[m[i]]=inp[i];
-    for(int i=0;i<n;i++) out1[i]=inp[m[i]];
-
-    return out0;
+    char* out=(char*)malloc(n);
+    for(int i=0;i<n;i++) out[m[i]]=inp[i];
+    return out;
     //out2[minv[i]]=out[i]
     //for(int i=0;i<n;i++) m_inv[m[i]]=i;
 
